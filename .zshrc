@@ -109,6 +109,6 @@ alias ls='eza --color=always --icons=auto'
 alias -- -="cd -"
 alias -- ~="cd ~"
 
-export NVM_DIR="$HOME/.nvm"c
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
