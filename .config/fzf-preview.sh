@@ -19,7 +19,7 @@ mime_type=$(file --mime-type -b "$1")
     text/x-log | application/x-log)
       lnav "$1"
       ;;
-    application/pdf)q
+    application/pdf)
       pdftotext "$1" - | less
       ;;
     text/*)
