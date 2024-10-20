@@ -5,7 +5,7 @@ dim=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}
 mime_type=$(file --mime-type -b "$1")
   case $mime_type in
     inode/directory)
-      eza -1 -T -L 1 --color=always --icons=always "$1"
+      eza -1 -T -L 1 --color=always --icons=auto "$1"
       ;;
     application/json | text/json)
       jq . "$1"

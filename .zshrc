@@ -35,7 +35,7 @@ zinit cdreplay -q
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 
 # Add in zsh plugins
@@ -83,6 +83,7 @@ zstyle ':completion:*' menu no
 # make fzf-tab follow FZF_DEFAULT_OPTS (doesn't work with --tmux flag)
 # zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
+# use custom script for previewing various files
 zstyle ':fzf-tab:complete:*:*' fzf-preview '${HOME}/.config/fzf-preview.sh $realpath'
 
 
@@ -99,11 +100,10 @@ export FZF_DEFAULT_OPTS="
   --preview='${HOME}/.config/fzf-preview.sh {}'"
 
 # Aliases
-alias ls='eza --icons=always'
-alias cd="z"
+alias ls='eza --color=always --icons=auto'
 alias -- -="cd -"
 alias -- ~="cd ~"
 
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"c
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
