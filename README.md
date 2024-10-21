@@ -4,7 +4,7 @@
 Ensure that the following are installed:
 - [Homebrew](https://brew.sh/) on macOS
 - `MonoLisa Nerd Font`
-- [stow](https://www.gnu.org/software/stow/manual/stow.html)
+- [`stow`](https://www.gnu.org/software/stow/manual/stow.html)
 - [WezTerm](https://wezfurlong.org/wezterm/index.html)
 - [`zsh`](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 - [`nvim`](https://neovim.io/)
