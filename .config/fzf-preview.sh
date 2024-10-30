@@ -22,7 +22,7 @@ case $mime_type in
   application/pdf)
     pdftotext "$1" - | less
     ;;
-  text/*)
+  text/* | application/*)
     bat --color=always --style=numbers "$1"
     ;;
   *)
