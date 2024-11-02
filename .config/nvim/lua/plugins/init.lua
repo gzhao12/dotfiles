@@ -32,7 +32,13 @@ return {
 
   {
     "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    keys = {
+      { "<leader>dt", "<cmd>lua require('dapui').toggle()<cr>", { noremap = true}, desc = "Toggle Dap UI" },
+      { "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { noremap = true }, desc = "Toggle Breakpoint" },
+      { "<leader>dc", "<cmd>DapContinue<cr>", { noremap = true }, desc = "Continue Debug" },
+      { "<leader>dr", "<cmd>lua require('dapui').open({reset = true})<cr>", { noremap = true }, desc = "Reset Dap UI" },
+    }
   },
 
   {
