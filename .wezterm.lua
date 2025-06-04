@@ -14,7 +14,7 @@ config.macos_window_background_blur = 30
 
 -- Fonts
 config.font = wezterm.font("MonoLisa Nerd Font Mono")
-config.font_size = 16
+config.font_size = 14
 
 -- Tab bar
 config.hide_tab_bar_if_only_one_tab = false
