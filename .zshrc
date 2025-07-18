@@ -99,7 +99,7 @@ bindkey '^n' history-search-forward
 
 
 # Environment Variables
-export PATH=/home/haru/.local/bin:$PATH:/usr/local/go/bin:/Library/PostgreSQL/17/bin:/home/haru/go/bin
+export PATH=$HOME/.local/bin:$HOME/go/bin:/usr/local/go/bin:/Library/PostgreSQL/17/bin:$PATH
 export FZF_DEFAULT_OPTS="
   --walker-skip .git,node_modules,target
   --preview='${HOME}/.config/fzf-preview.sh {}'"
