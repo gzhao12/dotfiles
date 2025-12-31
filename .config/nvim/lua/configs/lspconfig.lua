@@ -16,7 +16,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-require'lspconfig'.lua_ls.setup {
+vim.lsp.config('lua_ls', {
+  cmd = { 'lua-language-server' },
+  root_markers = { '.luarc.json', '.luarc.jsonc', '.luacheckrc', '.stylua.toml', 'stylua.toml', 'selene.toml', 'selene.yml', '.git' },
   on_init = function(client)
     if client.workspace_folders then
       local path = client.workspace_folders[1].name
@@ -24,7 +26,6 @@ require'lspconfig'.lua_ls.setup {
         return
       end
     end
-
     client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
       runtime = {
         -- Tell the language server which version of Lua you're using
@@ -48,7 +49,9 @@ require'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {}
   }
-}
+})
+
+vim.lsp.enable('lua_ls')
 
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
