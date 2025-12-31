@@ -53,6 +53,9 @@ end)
 -- tmux-like
 config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
+  -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+  {key="LeftArrow", mods="OPT", action=wezterm.action{SendString="\x1bb"}},
+  {key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"}},
 	{
 		mods = "LEADER",
 		key = "c",
